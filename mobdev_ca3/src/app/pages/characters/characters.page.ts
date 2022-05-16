@@ -11,7 +11,7 @@ import { ApiService } from '../../services/api.service';
 export class CharactersPage implements OnInit {
 
   characters: Observable<any>;
-  characterId: Observable<any>
+  characterId: Observable<any>;
 
   constructor(private router: Router, private api: ApiService) { }
 

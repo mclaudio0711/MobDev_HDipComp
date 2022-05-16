@@ -5,14 +5,15 @@
 </ion-header>
 
 <ion-content>
-  
+
   <ion-list>
 
     <ion-item button detail lines="inset" *ngFor="let character of characters | async" (click)="openDetails(character)">
       <!-- Geting character image-->
-      <ion-thumbnail class="img"> <img scr="{{ character.img }}"> </ion-thumbnail>
+      <!-- <ion-thumbnail class="img"> <img scr="{{ character.img }}"> </ion-thumbnail> -->
       <!--Getting character Name-->
       <ion-label style="margin-left: 15px;"> {{ character?.name }} </ion-label>
+      <!-- {{ character?.name }} -->
     </ion-item>
 
   </ion-list>
