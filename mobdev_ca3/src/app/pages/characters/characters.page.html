@@ -1,13 +1,20 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="medium">
     <ion-title>Characters</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-list>
-        <ion-item button detail lines="inset" *ngFor="let character of characters | async" (click)="openDetails(character)">
-        {{ character?.name }}
-        </ion-item>
-    </ion-list>
+  <ion-list>
+    <ion-item button detail lines="inset" *ngFor="let character of characters | async" (click)="openDetails(character)">
+
+      <ion-thumbnail class="img">
+        <!-- Geting character image-->
+        <img scr="{{ character.img }}">
+      </ion-thumbnail>
+      <!--Getting character Name-->
+      <ion-label style="margin-left: 15px;"> {{ character?.name }}
+    </ion-item>
+    </ion-item>
+  </ion-list>
 </ion-content>

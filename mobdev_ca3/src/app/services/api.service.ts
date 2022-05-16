@@ -9,15 +9,15 @@ export class ApiService {
     constructor(private http: HttpClient) { }
 
     getEpisodes() {
-        return this.http.get('https://8100-mikhailcct-mobdevca3-4r1lzru6qyb.ws-eu44.gitpod.io/assets/episodes.json')
+        return this.http.get('https://www.breakingbadapi.com/api/episodes')
     }
 
     getEpisode(id) {
-        return this.http.get(`https://8100-mikhailcct-mobdevca3-4r1lzru6qyb.ws-eu44.gitpod.io/assets/episode.json`);
+        return this.http.get(`https://www.breakingbadapi.com/api/episodes/${id}`);
     }
 
     getCharacters() {
-        return this.http.get('https://8100-mikhailcct-mobdevca3-4r1lzru6qyb.ws-eu44.gitpod.io/assets/characters.json')
+        return this.http.get('https://www.breakingbadapi.com/api/characters')
     }
 
     getCharacter(id) {
@@ -25,6 +25,7 @@ export class ApiService {
     }
 
     getQuotes() {
+
         return this.http.get(`https://www.breakingbadapi.com/api/quotes`)
     }
 
@@ -34,6 +35,10 @@ export class ApiService {
 
     getDeaths() {
         return this.http.get(`https://www.breakingbadapi.com/api/death-count?name=Gustavo+Fring`)
+    }
+
+    getDeath(id) {
+        return this.http.get(`https://www.breakingbadapi.com/api/deaths/${id}`)
     }
 
 }
