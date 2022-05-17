@@ -48,33 +48,59 @@ export class ApiService {
 
         return this.http.get(`https://www.breakingbadapi.com/api/deaths`)
     }
-
+    
     getDeath(id) {
         return this.http.get(`https://www.breakingbadapi.com/api/deaths/${id}`)
     }
-
+    
     searchQuote(input: string) {
         let selectedQuote: any[] = [];
         for (let quote of this.allSearch) {
-
+            
             if (quote.author.toLowerCase().includes(input.toLowerCase())) {
                 selectedQuote.push(quote);
             }
         }
-
+        
         return of(selectedQuote);
     }
 
-    searchDeath(input: string) {
-        let selectedName: any[] = [];
+    searchDeath(inputResp: string, inputDeath: string) {
+        let selectedResp: any[] = [];
         for (let death of this.allSearch) {
 
-            if (death.death.toLowerCase().includes(input.toLowerCase())) {
-                selectedName.push(death);
+            if (death.responsible.toLowerCase().includes(inputResp.toLowerCase())) {
+                if ((death.death.toLowerCase().includes(inputDeath.toLowerCase()))) {
+                    selectedResp.push(death);
+                }
             }
         }
 
-        return of(selectedName);
+        return of(selectedResp);
     }
+
+    // searchDeath(input: string) {
+        //     let selectedName: any[] = [];
+        //     for (let death of this.allSearch) {
+            
+    //         if (death.death.toLowerCase().includes(input.toLowerCase())) {
+    //             selectedName.push(death);
+    //         }
+    //     }
+
+    //     return of(selectedName);
+    // }
+
+    // searchResponsible(input: string) {
+    //     let selectedResp: any[] = [];
+    //     for (let death of this.allSearch) {
+
+    //         if (death.responsible.toLowerCase().includes(input.toLowerCase())) {
+    //             selectedResp.push(death);
+    //         }
+    //     }
+
+    //     return of(selectedResp);
+    // }
 
 }

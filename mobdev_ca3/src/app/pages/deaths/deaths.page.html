@@ -9,7 +9,10 @@
 
 <ion-content>
 	
-  <ion-searchbar [(ngModel)]="input" (ionChange)="search($event)" placeholder="Search Death">	</ion-searchbar>
+  <!-- <ion-searchbar [(ngModel)]="input" (ionChange)="search($event)" placeholder="Search Death">	</ion-searchbar> -->
+  <!-- <ion-searchbar [(ngModel)]="myinput" (ionChange)="searchResp($event)" placeholder="Search Responsible">	</ion-searchbar> -->
+  <ion-searchbar [(ngModel)]="inputDeath" (ionChange)="search($event)" placeholder="Search Death">	</ion-searchbar>
+  <ion-searchbar [(ngModel)]="inputResp" (ionChange)="search($event)" placeholder="Search Responsible">	</ion-searchbar>
 	
   <ion-card button detail lines = "inset" *ngFor="let death of deaths | async" (click)="death">
 		<ion-card-content>

@@ -12,7 +12,8 @@ export class DeathsPage implements OnInit {
 
   deaths: Observable<any>;
   deathsId: Observable<any>;
-  input: string = '';
+  inputDeath: string = '';
+  inputResp: string = '';
 
   constructor(private router: Router, private api: ApiService) { }
 
@@ -29,8 +30,13 @@ export class DeathsPage implements OnInit {
     this.router.navigateByUrl(`/tabs/deaths/${deathsId}`);
   }
 
+  // search() {
+  //   this.deaths = this.api.searchDeath(this.input);
+  // }
+  // searchResp() {
+  //   this.deaths = this.api.searchResponsible(this.Rinput);
+  // }
   search() {
-    this.deaths = this.api.searchDeath(this.input);
+    this.deaths = this.api.searchDeath(this.inputResp,this.inputDeath);
   }
-
 }
