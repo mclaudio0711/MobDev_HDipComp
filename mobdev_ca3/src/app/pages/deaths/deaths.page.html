@@ -1,9 +1,48 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>deaths</ion-title>
+
+  <ion-toolbar color="medium">
+    <ion-title>Deaths</ion-title>
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content>
 
+<ion-content>
+	<ion-searchbar [(ngModel)]="input" (ionChange)="search($event)" placeholder="Search Death">
+	</ion-searchbar>
+	<ion-card button detail lines = "inset" *ngFor="let death of deaths | async" (click)="death">
+		<ion-card-content>
+			<ion-list lines="none">
+
+				<ion-item>
+					{{ death.death }}
+				</ion-item>
+
+				<ion-item>
+					Death ID: {{ death.death_id }}
+				</ion-item>
+
+				<ion-item>
+					Responsible: {{ death.responsible }}
+				</ion-item>
+
+				<ion-item>
+					Death Cause: {{ death.cause }}
+				</ion-item>
+
+				<ion-item>
+					Last words: {{ death.last_words }}
+				</ion-item>
+
+				<ion-item>
+					Season: {{ death.season }}
+				</ion-item>
+
+				<ion-item>
+					Episode: {{ death.episode }}
+				</ion-item>
+
+			</ion-list>
+		</ion-card-content>
+	</ion-card>
 </ion-content>

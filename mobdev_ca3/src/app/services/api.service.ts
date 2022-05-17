@@ -14,12 +14,6 @@ export class ApiService {
 
     constructor(private http: HttpClient) { }
 
-    searchData(title: string): Observable<any> {
-        return this.http.get(`${this.url}?s=${encodeURI(title)}`).pipe(
-            map(results => results['Search']));
-
-    }
-
     getEpisodes() {
         return this.http.get('https://www.breakingbadapi.com/api/episodes')
     }
@@ -49,7 +43,11 @@ export class ApiService {
     }
 
     getDeaths() {
-        return this.http.get(`https://www.breakingbadapi.com/api/death-count?name=Gustavo+Fring`)
+        this.http.get(('https://breakingbadapi.com/api/deaths')).subscribe(data => {
+            this.allSearch = data as Array<any>;
+        });
+
+        return this.http.get(`https://www.breakingbadapi.com/api/deaths`)
     }
 
     getDeath(id) {
@@ -66,6 +64,24 @@ export class ApiService {
         }
 
         return of(selectedQuote);
+    }
+
+    searchDeath(input: string) {
+        let selectedName: any[] = [];
+        for (let death of this.allSearch) {
+
+            if (death.death.toLowerCase().includes(input.toLowerCase())) {
+                selectedName.push(death);
+            }
+        }
+
+        return of(selectedName);
+    }
+
+    searchData(title: string): Observable<any> {
+        return this.http.get(`${this.url}?s=${encodeURI(title)}`).pipe(
+            map(results => results['Search']));
+
     }
 
 }
