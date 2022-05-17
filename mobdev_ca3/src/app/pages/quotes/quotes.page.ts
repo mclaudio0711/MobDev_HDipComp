@@ -27,4 +27,9 @@ export class QuotesPage implements OnInit {
     this.quotes = this.api.searchQuote(this.kbinput);
   }
 
+  openDetails(quotes) {
+    let quotesId = quotes.quote_id;
+    this.router.navigateByUrl(`/tabs/quotes/${quotesId}`);
+  }
+
 }
