@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { QuoteDetailsPageRoutingModule } from './quote-details-routing.module';
-
 import { QuoteDetailsPage } from './quote-details.page';
 
 @NgModule({
