@@ -5,7 +5,7 @@
       <ion-back-button defaultHref="/tabs/episodes"></ion-back-button>
     </ion-buttons>
 
-    <ion-title>{{ eposide?.title }}</ion-title>
+    <ion-title> {{ episode?.title }}</ion-title>
 
     <ion-buttons slot="end">
 
@@ -31,10 +31,7 @@
     <ion-card-content>
       <ion-list lines="none">
          <ion-item>
-          Season: {{ episode.season }}
-        </ion-item>
-
-        <ion-item>
+          Season: {{ episode.season }} <br>
           Episode Number: {{ episode.episode }}
         </ion-item>
 

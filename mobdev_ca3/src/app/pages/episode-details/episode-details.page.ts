@@ -19,6 +19,7 @@ export class EpisodeDetailsPage implements OnInit {
     
     this.api.getEpisode(this.episodeId).subscribe(res => {
       this.episode = res[0];
+      console.log(JSON.stringify(this.episode.episode_id));
     })
     }
 }
