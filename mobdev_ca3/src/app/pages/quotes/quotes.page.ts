@@ -12,7 +12,7 @@ export class QuotesPage implements OnInit {
 
   quotes: any;
   quotesId: Observable<any>;
-  kbinput: string = '';
+  input: string = '';
 
   constructor(private router: Router, private api: ApiService) { }
 
@@ -24,7 +24,7 @@ export class QuotesPage implements OnInit {
   }
 
   search() {
-    this.quotes = this.api.searchQuote(this.kbinput);
+    this.quotes = this.api.searchQuote(this.input);
   }
 
   openDetails(quotes) {
