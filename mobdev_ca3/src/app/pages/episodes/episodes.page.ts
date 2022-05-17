@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { ApiService } from '../../services/api.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-episodes',
@@ -11,13 +11,16 @@ import { ApiService } from '../../services/api.service';
 export class EpisodesPage implements OnInit {
 
   episodes: Observable<any>;
+  episodeId: Observable<any>
+
+  // characterId: Observable<any>;
 
   constructor(private router: Router, private api: ApiService) { }
 
   ngOnInit() {
       this.episodes = this.api.getEpisodes();
       this.episodes.subscribe(data => {
-      console.log('my data: ', data);
+      console.log('my episodes: ', data);
     });
   }
 

@@ -10,7 +10,7 @@
     <ion-buttons slot="end">
 
       <ion-button (click)="unfavoriteepisode()" *ngIf="isFavorite">
-        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+        <ion-icon name="star" slot="icon-only"></ion-icon>
       </ion-button>
 
       <ion-button (click)="favoriteepisode()" *ngIf="!isFavorite">
@@ -24,21 +24,35 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
-  <ion-card *ngIf="episode" class="movie-card">
-    
-    <ion-card-header>Episode {{ episode.season }}: {{ episode.episode }}</ion-card-header>
+  <ion-card *ngIf="episode">
+
     <ion-card-content>
-      {{ episode.season }}
+      <ion-list lines="none">
+         <ion-item>
+          Season: {{ episode.season }}
+        </ion-item>
+
+        <ion-item>
+          Episode Number: {{ episode.episode }}
+        </ion-item>
+
+        <ion-item>
+          Episode Title: {{ episode.title }}
+        </ion-item>
+
+        <ion-item>
+          Date on Air: {{ episode.air_date }}
+        </ion-item>
+
+        <ion-item>
+          Characters: {{ episode.characters }}
+        </ion-item>
+
+      </ion-list>
     </ion-card-content>
-    <ion-item class="movie-info" lines="none">
-      <ion-icon name="episode" slot="start"></ion-icon>
-      Director: {{ episode.season }}
-    </ion-item>
-    <ion-item class="movie-info" lines="none">
-      <ion-icon name="calendar" slot="start"></ion-icon>
-      Release Date: {{ episode.air_date }}
-    </ion-item>
+
   </ion-card>
+
 </ion-content>
