@@ -10,7 +10,6 @@ import { map } from 'rxjs/operators';
 export class ApiService {
 
     allSearch: Array<any>;
-    // url = `https://www.breakingbadapi.com/api/episodes`;
 
     constructor(private http: HttpClient) { }
 
@@ -77,11 +76,5 @@ export class ApiService {
 
         return of(selectedName);
     }
-
-    // searchData(title: string): Observable<any> {
-    //     return this.http.get(`${this.url}?s=${encodeURI(title)}`).pipe(
-    //         map(results => results['Search']));
-
-    // }
 
 }
