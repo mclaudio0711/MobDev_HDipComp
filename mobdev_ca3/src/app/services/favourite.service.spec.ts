@@ -1,11 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import { ApiService } from './api.service';
 
-describe('ApiService', () => {
-    beforeEach(() => TestBed.configureTestingModule({}));
+import { FavouriteService } from './favourite.service';
 
-    it('should be created', () => {
-        const service: ApiService = TestBed.get(ApiService);
-        expect(service).toBeTruthy();
-    });
+describe('FavouriteService', () => {
+  beforeEach(() => TestBed.configureTestingModule({}));
+
+  it('should be created', () => {
+    const service: FavouriteService = TestBed.get(FavouriteService);
+    expect(service).toBeTruthy();
+  });
 });

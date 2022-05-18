@@ -1,4 +1,4 @@
 tasks:
   - name: Installing Ionic 5 & Angular CLI
-  - init: cd mobdev_ca3
-    command: npm i -D -E @angular/cli && npx --yes ionic serve
+  - init: cd /MobDev_HDipComp/mobdev_ca3
+    command: cd /MobDev_HDipComp/mobdev_ca3 && npm i -D -E @angular/cli && npx --yes ionic serve
