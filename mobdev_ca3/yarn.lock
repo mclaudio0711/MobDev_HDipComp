@@ -4703,22 +4703,15 @@ loader-utils@1.2.3, loader-utils@^1.0.1, loader-utils@^1.0.2, loader-utils@^1.1.
 
 localforage-cordovasqlitedriver@1.7.0:
   version "1.7.0"
-  resolved "https://registry.yarnpkg.com/localforage-cordovasqlitedriver/-/localforage-cordovasqlitedriver-1.7.0.tgz#8b93957759ee688d3a58d5ba7c0477f6ccb53838"
+  resolved "https://registry.npmjs.org/localforage-cordovasqlitedriver/-/localforage-cordovasqlitedriver-1.7.0.tgz"
   integrity sha1-i5OVd1nuaI06WNW6fAR39sy1ODg=
   dependencies:
     localforage ">=1.5.0"
 
-localforage@1.7.1:
+localforage@1.7.1, localforage@>=1.5.0:
   version "1.7.1"
-  resolved "https://registry.yarnpkg.com/localforage/-/localforage-1.7.1.tgz#e4927e042302b864db30f3211f13b5c6f0de965d"
+  resolved "https://registry.npmjs.org/localforage/-/localforage-1.7.1.tgz"
   integrity sha1-5JJ+BCMCuGTbMPMhHxO1xvDell0=
-  dependencies:
-    lie "3.1.1"
-
-localforage@>=1.5.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/localforage/-/localforage-1.10.0.tgz#5c465dc5f62b2807c3a84c0c6a1b1b3212781dd4"
-  integrity sha512-14/H1aX7hzBBmmh7sGPd+AOMkkIrHM3Z1PAyGgZigA1H1p5O5ANnMyWzvpAETtG68/dC4pC0ncy3+PPGzXZHPg==
   dependencies:
     lie "3.1.1"
 
