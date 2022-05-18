@@ -28,22 +28,30 @@
 
   <ion-card *ngIf="episode">
 
+    <ion-card-header>
+      Breaking Bad | S{{ episode.season }}:E{{ episode.episode }}
+    </ion-card-header>
+
     <ion-card-content>
       <ion-list lines="none">
-         <ion-item>
+        <ion-item>
+          <ion-icon name="film" slot="start"></ion-icon> 
           Season: {{ episode.season }} <br>
-          Episode Number: {{ episode.episode }}
+          Episode: {{ episode.episode }}
         </ion-item>
 
         <ion-item>
-          Episode Title: {{ episode.title }}
+          <ion-icon name="easel" slot="start"></ion-icon>
+          Title: {{ episode.title }}
         </ion-item>
 
         <ion-item>
-          Date on Air: {{ episode.air_date }}
+          <ion-icon name="calendar" slot="start"></ion-icon>
+          Release Date: {{ episode.air_date }}
         </ion-item>
 
         <ion-item>
+          <ion-icon name="people" slot="start"></ion-icon>
           Characters: {{ episode.characters }}
         </ion-item>
 
