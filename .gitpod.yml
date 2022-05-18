@@ -1,4 +1,4 @@
 tasks:
-  - name: Installing Ionic 5 & Angular CLI
+  - name: Installing Ionic 5 & Angular CLI & ionic/storage
   - init: cd /workspace/MobDev_HDipComp/mobdev_ca3/ 
     command: cd /workspace/MobDev_HDipComp/mobdev_ca3/ && npm i -D -E @angular/cli && yarn add @ionic/storage@2.2.0 && npx --yes ionic serve
