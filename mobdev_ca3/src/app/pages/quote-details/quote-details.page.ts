@@ -18,7 +18,6 @@ export class QuoteDetailsPage implements OnInit {
 
     this.quoteId = this.activatedRoute.snapshot.paramMap.get('id');
 
-    // this.quoteId = this.activatedRoute.snapshot.paramMap.get('id');
     this.api.getQuote(this.quoteId).subscribe(res => {
       this.quote = res[0];
       console.log(JSON.stringify(this.quote.quote_id));
