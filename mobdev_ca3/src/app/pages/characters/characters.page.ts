@@ -26,7 +26,7 @@ export class CharactersPage implements OnInit {
     let characterId = character.char_id;
     this.router.navigateByUrl(`/tabs/characters/${characterId}`);
     this.characterId.subscribe(data => {
-      console.log('my data', data);
+      console.log('my CharactersDetails', data);
     });
   }
 }
