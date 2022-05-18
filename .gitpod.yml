@@ -1,4 +1,4 @@
 tasks:
   - name: Installing Ionic 5 & Angular CLI
   - init: cd /workspace/MobDev_HDipComp/mobdev_ca3
-    command: cd /workspace/MobDev_HDipComp/mobdev_ca3 && npm i -D -E @angular/cli && npx --yes ionic serve
+    command: cd /workspace/MobDev_HDipComp/mobdev_ca3 && /workspace/MobDev_HDipComp/mobdev_ca3/.npm i -D -E @angular/cli && /workspace/MobDev_HDipComp/mobdev_ca3/npx --yes ionic serve
