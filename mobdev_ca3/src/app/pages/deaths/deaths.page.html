@@ -1,45 +1,53 @@
 <ion-header>
 
-  <ion-toolbar color="medium">
-    <ion-title>Deaths</ion-title>
-  </ion-toolbar>
+	<ion-toolbar color="danger">
+		<ion-title>Deaths</ion-title>
+	</ion-toolbar>
+
+	<ion-toolbar color="danger">
+		<ion-searchbar [(ngModel)]="inputDeath" (ionChange)="search($event)" placeholder="Search Death"> </ion-searchbar>
+		<ion-searchbar [(ngModel)]="inputResp" (ionChange)="search($event)" placeholder="Search Responsible"> </ion-searchbar>	
+	</ion-toolbar>
 
 </ion-header>
 
 
 <ion-content>
-	
-  <!-- <ion-searchbar [(ngModel)]="input" (ionChange)="search($event)" placeholder="Search Death">	</ion-searchbar> -->
-  <!-- <ion-searchbar [(ngModel)]="myinput" (ionChange)="searchResp($event)" placeholder="Search Responsible">	</ion-searchbar> -->
-  <ion-searchbar [(ngModel)]="inputDeath" (ionChange)="search($event)" placeholder="Search Death">	</ion-searchbar>
-  <ion-searchbar [(ngModel)]="inputResp" (ionChange)="search($event)" placeholder="Search Responsible">	</ion-searchbar>
-	
-  <ion-card button detail lines = "inset" *ngFor="let death of deaths | async" (click)="death">
+
+	<!-- <ion-searchbar [(ngModel)]="input" (ionChange)="search($event)" placeholder="Search Death">	</ion-searchbar> -->
+	<!-- <ion-searchbar [(ngModel)]="myinput" (ionChange)="searchResp($event)" placeholder="Search Responsible">	</ion-searchbar> -->
+	<!-- <ion-searchbar [(ngModel)]="inputDeath" (ionChange)="search($event)" placeholder="Search Death"> </ion-searchbar> -->
+	<!-- <ion-searchbar [(ngModel)]="inputResp" (ionChange)="search($event)" placeholder="Search Responsible"> </ion-searchbar> -->
+
+	<ion-card button detail lines="inset" *ngFor="let death of deaths | async" (click)="death">
 		<ion-card-content>
 			<ion-list lines="none">
 
 				<ion-item>
+					<ion-icon name="person-remove-outline"></ion-icon>
 					Death: {{ death.death }}
 				</ion-item>
 
 				<ion-item>
+					<ion-icon name="reader-outline"></ion-icon>
 					Death Cause: {{ death.cause }}
 				</ion-item>
-				<!-- <ion-item>
-					Death ID: {{ death.death_id }}
-				</ion-item> -->
+
 
 				<ion-item>
+					<ion-icon name="walk-outline"></ion-icon>
 					Responsible: {{ death.responsible }}
 				</ion-item>
 
 				<ion-item>
-					Last words: {{ death.last_words }}
+					<ion-icon name="ear-outline"></ion-icon>
+					Last words: " <i>{{ death.last_words }}</i> "
 				</ion-item>
 
 				<ion-item>
+					<ion-icon name="recording-outline" slot="start"></ion-icon>
 					Season: {{ death.season }} <br>
-          Episode: {{ death.episode }}
+					Episode: {{ death.episode }}
 				</ion-item>
 
 			</ion-list>

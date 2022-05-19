@@ -12,28 +12,30 @@
 <ion-content>
   <ion-card *ngIf="character">
 
+    <ion-card-header>Nickname: {{ character.nickname }}</ion-card-header>
+
     <ion-list lines="none">
       <ion-item class="img">
-        <img src="{{ character.img }}">
+        <img src="{{ character.img }}" alt="{{ character.nickname }}">
       </ion-item>
 
       <ion-item>
-        Nickname: {{ character.nickname }}
-      </ion-item>
-
-      <ion-item>
-        Birthday: {{ character.birthday }}
-      </ion-item>
-
-      <ion-item>
-        Occupation: {{ character.occupation }}
-      </ion-item>
-
-      <ion-item>
+        <ion-icon name="heart-outline" slot="start"></ion-icon>
         Status: {{ character.status }}
       </ion-item>
 
       <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        Birthday: {{ character.birthday }}
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="briefcase-outline" slot="start"></ion-icon>
+        Occupation: {{ character.occupation }}
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="recording-outline" slot="start"></ion-icon>
         Appeared in Season: {{ character.appearance }}
       </ion-item>
 

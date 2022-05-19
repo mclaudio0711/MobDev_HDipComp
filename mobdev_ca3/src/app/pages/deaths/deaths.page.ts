@@ -26,10 +26,12 @@ export class DeathsPage implements OnInit {
   }
 
   openDetails(death) {
-    let deathsId = death.death_id;
-    this.router.navigateByUrl(`/tabs/deaths/${deathsId}`);
+    //I kept this part to keep the click-on effect
+    // let deathsId = death.death_id;
+    // this.router.navigateByUrl(`/tabs/deaths/${deathsId}`);
   }
 
+  // Here I started the idea about researching
   // search() {
   //   this.deaths = this.api.searchDeath(this.input);
   // }

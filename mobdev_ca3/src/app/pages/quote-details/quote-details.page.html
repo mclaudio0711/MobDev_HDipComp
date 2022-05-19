@@ -16,11 +16,13 @@
     <ion-list lines="none">
       
       <ion-item>
+        <ion-icon name="chatbox-ellipses-outline"  slot="start"></ion-icon>
         Said by: {{ quote.author }}
       </ion-item>
 
       <ion-item>
-        {{ quote.quote }}
+        <ion-icon name="megaphone-outline"  slot="start"></ion-icon>
+        " <i> {{ quote.quote }} </i> "
       </ion-item>
 
     </ion-list>
